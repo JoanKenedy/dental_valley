@@ -1,0 +1,95 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+const description = "En Dental Valley, ofrecemos servicios dentales de calidad con un enfoque en la salud bucal integral. Nuestro equipo de profesionales altamente calificados se especializa en una variedad de tratamientos, desde limpiezas y chequeos de rutina hasta procedimientos de ortodoncia y estética dental. Descubre cómo podemos crear y mantener tu sonrisa saludable y hermosa. ¡Agenda tu cita hoy!"
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content={description}>
+		<meta name="keywords" content="dentista, salud dental, odontología, ortodoncia, estética dental, limpieza dental, chequeo dental,  Dental Valley">
+		<meta name="author" content="Kenedi Mayo">
+		<meta name="robots" content="index, follow">
+
+		<!-- Open Graph data -->
+		<meta property="og:title" content={title} />
+		<meta property="og:type" content="Web" />
+		<meta property="og:url" content="https://dentalvalley.com.mx/" />
+		<meta property="og:image" content="https://dentalvalley.com.mx/favicon.png" />
+		<meta property="og:description" content={description} />
+		<meta property="og:site_name" content="Dental Valley" />
+		<link rel="shortcut icon" href="/logo_valley.png" type="image/x-icon">
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+		
+	
+     		<!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L4CKEQ4L9L"></script>
+	<script is:inline>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	
+	  gtag('config', 'G-L4CKEQ4L9L');
+	</script>
+	<!-- Meta Pixel Code -->
+<script is:inline>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2749968201826830');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2749968201826830&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	@font-face {
+		font-family: Salve-Sans;
+		src: url(../fonts/Salve-Sans.otf);
+	}
+	@font-face {
+		font-family: SalveBold;
+		src: url(../fonts/Salve-SansBold.otf);
+	}
+	:root {
+		--blue-100: rgb(20, 28, 36);
+		--gold-200: rgb(140,92,36);
+		--gold-100: rgb(219,182,115);
+		
+		--swiper-pagination-color: var(--gold-100);
+	}
+	* {
+		box-sizing: border-box;
+		text-decoration: none;
+		scroll-behavior: smooth;
+	}
+	html {
+		font-family: Salve-Sans, sans-serif;
+	}
+	h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection,
+	p::selection, strong::selection, a::selection, img::selection, li::selection, div::selection, iframe::selection,
+	svg::selection {
+		background-color: rgba(219, 183, 115, 0.584);
+		color: white;
+	}
+</style>

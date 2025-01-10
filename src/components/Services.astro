@@ -1,0 +1,85 @@
+---
+import ArrowDown from '../components/ArrowDown.astro';
+interface Props {
+  title: string,
+  p: string,
+  img: string,
+}
+const { p, title, img } = Astro.props;
+---
+
+<div class="card p-2 rounded-md bg-gradient-to-tr from-blue-100 to-[rgb(20,_20,_72)] transition-all hover:transition-all md:h-full md:w-full md:max-w-[350px]">
+  <article class=" max-w-96 flex flex-col justify-start h-full btnServices">
+    <img  src={img} />
+    <button class="w-full flex justify-between items-center px-4">
+      <h2 class="font-bold text-xl gold-origin my-3">{title}</h2>
+      <ArrowDown class="w-4 pl-[2px] transition-all gold-origin md:w-6 md:pl-0"/>
+    </button>
+    <div class="max-h-0 transition-all duration-[500ms] overflow-hidden origin-bottom" id="text">
+      <p class="author text-sm text-justify px-4">{p}</p>
+      
+      <a class="gold" href="https://api.whatsapp.com/send?phone=527716280886" target="_blank" rel="noopener noreferrer" title="Número de WhatsApp de la clínica">Contacto</a>
+    </div>
+  </article>
+</div>
+
+<style>
+  .btn-author{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.author {
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  
+
+}
+.gold{
+  display: block;
+  background-color: #cc9900;
+  padding: 7px;
+  margin: 7px auto;
+  width: 45%;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+
+}
+.gold-origin{
+   color: #cc9900;
+  } 
+  img {
+    aspect-ratio: 5/3;
+  }
+  button:hover svg {
+    transition: all 0.2s linear;
+    
+  }
+ 
+  .show {
+    max-height: 500px;
+    transition: all 0.3s linear;
+    transform-origin: top;
+  }
+  .rotate {
+    transform: rotate(180deg);
+    transition: all 0.2s linear;
+  }
+
+</style>
+
+
+<script>
+  const btnShow = document.querySelectorAll('article.btnServices > button')
+  const text = document.querySelectorAll('div#text')
+  const arrow = document.querySelectorAll('article.btnServices > button > svg')
+
+  btnShow.forEach((item, i) => (
+    item.addEventListener('click', () => {
+      text[i].classList.toggle('show')
+      arrow[i].classList.toggle('rotate')
+    })
+  ))
+</script>

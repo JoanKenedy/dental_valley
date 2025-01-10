@@ -1,0 +1,72 @@
+---
+import Galeria from "./Galeria.astro";
+
+
+---
+
+<section class="w-full flex justify-center items-center flex-col" id="Nosotros">
+  <div class="w-full max-w-screen-xl px-4 py-14 flex justify-center items-center flex-col md:flex-row md:justify-evenly ">
+    <h1 class="font-black text-4xl text-center pb-3 md:hidden">¡Somos <strong class="gold-origin">Dental Valley!</strong></h1>
+    <img class="w-full mb-6 rounded-md bg-gradient-to-r from-blue-100 to-indigo-950 md:max-w-80" src="/foto11.jpg" alt="Imagen Somos">
+    <div class=" max-w-[500px]"> 
+      <h1 class="hidden font-black text-4xl text-center md:text-6xl md:block">¡Somos <strong class="gold-origin">Dental Valley!</strong></h1>
+      <p class="text-g mt-4 text-justify font-semibold md:text-xl md:pl-4">¡Hola, te saluda la doctora Sara Ortiz!
+        Si te encuentras en este sitio, seguramente estas en busca de algun tratamiento dental que has pospuesto
+        desde hace algún tiempo, un tratamiento estético, o en el mejor de los casos, estas aquí para buscar
+        tratamientos preventivos que ayuden a mantener tu salud bucal.
+        Y déjame te digo que ¡Haz llegado al mejor lugar! <br> En Dental Valley nos comprometemos contigo a entregarte los mejores tratamientos.
+      </p>
+    </div>
+  </div>
+  <section class="w-full max-w-screen-xl pb-14 px-4 grid grid-cols-1 gap-4 place-items-center md:grid-cols-2 md:gap-8">
+    <div class=" pb-5 md:pl-4 md:order-2">
+      <h2 class="font-black text-4xl text-center md:text-6xl gold-origin">¿Quiénes somos?</h2>
+      <p class="text-g mt-4 text-justify font-semibold md:text-xl md:pl-6">Con un equipo de trabajo, que en conjunto , suman casi 50 años de experiencia.
+Nos caracteriza la calidad en nuestro trabajo, higiene, la responsabilidad , la amabilidad y el
+profesionalismo.
+Manteniendonos en actualización constante, ya que tenemos como finalidad proporcionar las mejores
+alternativas para cada caso de manera personalizada.
+¡Somos un equipo capacitado y comprometido con tu salud!
+Y así como contamos con un equipo de especialistas dentales,tambien trabajamos con un laboratorio
+dental que se mantiene totalmente a la vanguardia, trabajando con odontología digital para garantizar
+trabajo de la mas alta calidad,estética y de excelencia
+¡Visitanos y compruebalo!
+
+</p>
+    </div>
+    <!-- <section class="w-full grid grid-cols-10 auto-rows-[10rem] gap-4 place-content-center md:w-1/2 md:auto-rows-[10rem]">
+      <img class="w-full h-full col-span-4 rounded-lg relative img-c object-cover" src="/c-1.webp" alt="COnsultorio">
+      <img class="w-full h-full col-span-6 rounded-lg relative img-c object-cover" src="/c-2.webp" alt="COnsultorio">
+      <img class="w-full h-full col-span-6 rounded-lg relative img-c object-cover" src="/c-3.webp" alt="COnsultorio">
+      <img class="w-full h-full col-span-4 rounded-lg relative img-c object-cover" src="/c-4.webp" alt="Consultorio">
+      <img class="w-full h-full col-span-4 rounded-lg relative img-c object-cover" src="/c-1.webp" alt="Consultorio">
+      <img class="w-full h-full col-span-6 rounded-lg relative img-c object-cover" src="/c-6.webp" alt="COnsulorio">
+    </section> -->
+    <Galeria 
+      img="c"
+    />
+  </section>
+</section>
+
+<style>
+  .img-c {
+    transition: all 0.2s ease-in-out;
+  }
+  .img-c:hover {
+    -webkit-box-shadow: 0px 0px 27px 17px rgba(219,183,115,0.65);
+    -moz-box-shadow: 0px 0px 27px 17px rgba(219,183,115,0.65);
+    box-shadow: 0px 0px 27px 17px rgba(219,183,115,0.65);
+    transition: all 0.2s ease-in-out;
+  }
+  .gold-origin{
+   color: #cc9900;
+  } 
+  .text-g{
+      font-size: 16px;
+    }
+  @media(min-width: 768px){
+    .text-g{
+      font-size: 19px;
+    }
+  }
+</style>

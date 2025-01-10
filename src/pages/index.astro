@@ -1,0 +1,86 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Slider from '../components/Slider.astro'
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import Promotions from "../components/Promotions.astro";
+import Services from '../components/Services.astro';
+import Reviews from '../components/Reviews.astro';
+import Direction from '../components/Direction.astro';
+import Flotantes from '../components/Flotantes.astro';
+// import PediatricDentistry from '../components/PediatricDentistry.astro'
+// import Galeria from '../components/Galeria.astro'
+---
+
+<Layout title="Dental Valley">
+	<main>
+		<Header />
+		<Slider />
+		<Hero />
+		<!-- <PediatricDentistry /> -->
+		<!-- <Galeria /> -->
+		<Promotions />
+		<section class="w-full flex justify-center items-center py-14" id="Tratamientos">
+			<div class="w-full flex justify-center items-center flex-col px-4">
+				<h2 class=" font-bold text-center text-4xl mb-5 md:text-6xl">Nuestros <strong class="gold-origin">servicios dentales</strong></h2>
+				<div class="services w-full grid place-content-center place-items-center gap-8">
+					<Services 
+						p='La especialidad de ortodoncia se dedica al diagnóstico, prevención y tratamiento de irregularidades dentales y óseos, como maloclusiones. Busca a ademas de la estética brindarte salud bucal corrigiendo discrepancias dentales'
+						title='Ortodoncia'
+						img='/ortodoncia.webp'
+					/>
+					<Services 
+						p='Especialidad odontológica que se enfoca en el diagnóstico y tratamiento de enfermedades y lesiones relacionadas con la pulpa dental y los tejidos que rodean las raíces de los dientes. Los endodoncistas realizan tratamientos como la terapia de conducto radicular para salvar dientes infectados o dañados, así como otros procedimientos para preservar la salud dental y prevenir futuras complicaciones.'
+						title='Endodoncia'
+						img='/endodoncia.webp'
+					/>
+					<Services 
+						p='Especialidad odontológica que se centra en el diagnóstico, tratamiento y prevención de enfermedades de las encías y de los tejidos que soportan los dientes, como el hueso alveolar y el ligamento periodontal. Los periodoncistas tratan condiciones como la gingivitis y la periodontitis, realizando procedimientos como la limpieza profunda de bolsas periodontales, la cirugía periodontal y el injerto de tejido para restaurar la salud periodontal y mantener la estabilidad de los dientes en la boca.'
+						title='Periodoncia'
+						img='/periodoncia.webp'
+					/>
+					<Services 
+						p='Especialidad médica y odontológica que se dedica al diagnóstico, tratamiento y prevención de enfermedades, lesiones y defectos relacionados con la cara, la cabeza, el cuello, la mandíbula y la boca. Los cirujanos maxilofaciales pueden tratar una amplia gama de condiciones, incluyendo fracturas faciales, malformaciones congénitas, tumores, trastornos de la articulación temporomandibular (ATM) y cirugía reconstructiva después de traumatismos o extirpación de tumores. También realizan procedimientos estéticos faciales, como cirugía ortognática para corregir malformaciones dentofaciales. Y se encargan del retiro atraumatico de los terceros molares o muelas del juicio.'
+						title='Cirugía Maxilofacial '
+						img='/cirugia.webp'
+					/>
+					<Services 
+						p='Especialidad odontológica que se dedica al cuidado de la salud oral de los niños desde la infancia hasta la adolescencia. Los odontopediatras se especializan en el diagnóstico, tratamiento y prevención de enfermedades dentales específicas de los niños, así como en el manejo del comportamiento y las necesidades especiales de los pacientes pediátricos. Su objetivo es promover la salud bucal desde una edad temprana y educar a los niños y a sus padres sobre la importancia de una buena higiene dental y hábitos alimenticios saludables'
+						title='Odontopediatría'
+						img='/odontopediatria.webp'
+					/>
+					<Services 
+						p='Área de la odontología que se centra en mejorar la apariencia estética de la sonrisa y los dientes. Los profesionales de la estética dental trabajan para corregir imperfecciones dentales, como decoloración, malformaciones, desalineaciones, espacios entre los dientes y formas irregulares, con el objetivo de lograr una sonrisa más atractiva y armoniosa. Utilizan una variedad de tratamientos cosméticos, que pueden incluir blanqueamiento dental, carillas de porcelana, coronas estéticas, ortodoncia estética, implantes dentales y restauraciones de composite, entre otros, para mejorar la estética dental de sus pacientes. '
+						title='Estética dental'
+						img='/sonrisa.webp'
+					/>
+					<Services 
+						p='Subespecialidad de la patología que se centra en el estudio y diagnóstico de enfermedades ytrastornos que afectan los dientes, las encías, la mandíbula y otras estructuras orales. Los patólogosdentales examinan muestras de tejido oral, como biopsias de lesiones orales, para identificarenfermedades como cáncer oral, lesiones precancerosas, enfermedades de las encías, infeccionesbacterianas y enfermedades hereditarias que afectan la salud bucal. También colaboran estrechamentecon otros profesionales de la salud dental para ayudar en el diagnóstico y tratamiento de diversascondiciones dentales y orales.'
+						title='Patología'
+						img='/patologia.webp'
+					/>
+				</div>
+			</div>
+		</section>
+		<Reviews />
+		<Direction />
+		<Flotantes/>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	.services {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	 .gold-origin{
+   color: #cc9900;
+  } 
+	@media (min-width: 768px) {
+		.services {
+			grid-template-columns: repeat(3, minmax(0px, 350px));
+		}
+	}
+
+</style>

@@ -1,0 +1,101 @@
+---
+import Review from "./Review.astro";
+---
+
+<div class="w-full flex justify-center items-center bg-cover bg-center bg-no-repeat container-testimonios">
+  <div class=" bg-blue-100/75 flex w-full justify-center items-center">
+    <section class="flex w-full justify-center items-center max-w-7xl">
+      <div class="px-4 py-14 flex justify-center items-center flex-col md:flex-row md:w-full" id="Testimonios">
+        <div class="flex justify-center items-start flex-col text-start mb-5">
+          <h3 class="gold-origin2  font-black text-4xl">TESTIMONIOS</h3>
+          <h4 class="text-white text-xl font-semibold">Opinión de Nuestros Pacientes</h4>
+          <p class=" mt-5 font-semibold text-lg text-white">Algunos testimonios de nuestros pacientes</p>
+          <a class="text-white rounded-md text-lg font-semibold py-[10px] px-[15px] bg-gradient-to-r gold-origin transition-all hover:transition-all hover:scale-105" href="https://api.whatsapp.com/send?phone=527716280886" target="_blank" rel="noopener noreferrer" title="Número de WhatsApp de la clínica">Llame ya</a>
+        </div>
+        <div class="swiper-container relative w-[300px] my-0 mx-auto md:w-[400px] lg:w-[50%]">                          
+          <div class="swiper sample-slider-1">
+            <div class="swiper-wrapper">
+              <Review 
+                text="Excelente atención, profesionalismo, ética, limpieza, excelente trabajo. Súper recomendable para aquellas personas que tienen pánico de ir al dentista, la Dra tiene todos los cuidados necesarios para hacer sentir al paciente tranquilo y confiar !"
+                name="Nadia Gutierrez"
+                img="/nadia.png"
+              />
+              <Review 
+                text="Una excelente dentista, muy amable y además muy preparada, siempre fue clara con el tratamiento, además cuenta con una vista increíble que hace más amena la visita, la recomiendo mucho."
+                name="Jordan Alexander Cruz Garcia"
+                img="/jordan.png"
+              />
+              <Review 
+                text="Excelente atención, la odontóloga muy paciente y te resuelve todas las dudas que puedas tener, excelente ambiente."
+                name="Arce"
+                img="/arce.png"
+              />
+              <Review 
+                text="Mi experiencia con la Dra Sara fue muy grata, todo el tiempo me explicó acerca de las necesidades del cuidado de mis dientes. Y quedé muy contenta con el resultado de mi tratamiento. Es muy amable, pero sobre todo muy profesional en lo que hace."
+                name="Samanta Urrutia Gomez"
+                img="/samanta.png"
+              />
+              <Review 
+                text="Excelente dentista, muy puntual, limpia y profesional"
+                name="Adrian Romero"
+                img="/adrian.png"
+              />
+              <Review 
+                text="Excelente atención y profesionalismo en cada consulta, lo recomiendo totalmente, el recuperar mi sonrisa y quedar muy satisfecha con el resultado fue lo mejor!!!!"
+                name="Pamela Nava"
+                img="/pamela.png"
+              />
+              <Review 
+                text="La atención es muy buena, la doctora te explica todo y es muy paciente contigo"
+                name="Angela Contreras"
+                img="/angela.png"
+              />
+              
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>                           
+        </div> 
+      </div>
+    </section>
+  </div>
+</div>
+
+<style>
+  .container-testimonios {
+    background-image: url(/reviews.webp);
+  }
+  .gold-origin{
+   background-color: #cc9900;
+  } 
+  .gold-origin2{
+   color: #cc9900;
+  } 
+  .swiper-container .swiper-pagination,
+  .swiper-container-1 .swiper-pagination {
+    bottom: -30px!important;
+  }
+</style>
+<script>
+  import Swiper from 'swiper';
+  import { Autoplay, Pagination  } from 'swiper/modules';
+  const swiper1 = new Swiper('.sample-slider-1', {
+    modules: [Autoplay, Pagination ],
+    speed: 400,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 2000,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 2,
+        spaceBetween: 40
+      }
+    }
+  });
+</script>
