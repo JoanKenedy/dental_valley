@@ -1,0 +1,39 @@
+---
+import Pacientes from "./Pacientes.astro";
+import Testimonio1 from "../../public/testimonio-1.mp4"
+import Testimonio2 from "../../public/testimonio-2.mp4"
+import Testimonio3 from "../../public/testimonio-3.mp4"
+import Testimonio4 from "../../public/testimonio-4.mp4"
+import Testimonio5 from "../../public/testimonio-5.mp4"
+---
+
+<section class="w-full flex justify-center items-center px-4 pb-6 pt-0">
+  <div class="w-full flex justify-around items-center max-w-7xl flex-col text-center md:my-14" id="Ubicacion">
+    <h4 class=" text-4xl font-black mb-0 md:text-6xl">Pacientes <strong class="font-semibold gold-origin">Satisfechos</strong></h4>
+     <p class=" mt-1 font-semibold  text-base md:text-xl text-black mb-2 md:mb-3">La satisfacción de nuestros pacientes es nuestra mayor prioridad. Nos llena de orgullo escuchar cómo nuestras atenciones han transformado sus sonrisas y su confianza.  Cada visita está diseñada para brindar comodidad, cuidado personalizado y resultados excepcionales. ¡Gracias por confiar en nosotros para cuidar su salud bucal!</p>
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-7  md:w-full">
+    
+    <Pacientes src={Testimonio1}/>
+    <Pacientes src={Testimonio2}/>
+    <Pacientes src={Testimonio3}/>
+    <Pacientes src={Testimonio4}/>
+    <Pacientes src={Testimonio5}/>
+    
+  </div>
+  </div>
+</section>
+<style>
+  .gold-origin{
+   color: #cc9900;
+  } 
+  .golden{
+   background-color: #cc9900;
+  } 
+  @media (min-width: 768px) {
+    .container-map {
+      -webkit-box-shadow: -19px 3px 22px -11px rgba(20,28,36,1);
+      -moz-box-shadow: -19px 3px 22px -11px rgba(20,28,36,1);
+      box-shadow: -19px 3px 22px -11px rgba(20,28,36,1);
+    }
+  }
+</style>
