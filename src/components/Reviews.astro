@@ -13,7 +13,7 @@ import Review from "./Review.astro";
           <a class="text-white rounded-md text-lg font-semibold py-[10px] px-[15px] bg-gradient-to-r gold-origin transition-all hover:transition-all hover:scale-105" href="https://api.whatsapp.com/send?phone=527716280886" target="_blank" rel="noopener noreferrer" title="Número de WhatsApp de la clínica">Llame ya</a>
         </div>
         <div class="swiper-container relative w-[300px] my-0 mx-auto md:w-[400px] lg:w-[50%]">                          
-          <div class="swiper sample-slider-1">
+          <div class="swiper sample-slider-1" >
             <div class="swiper-wrapper">
               <Review 
                 text="Excelente atención, profesionalismo, ética, limpieza, excelente trabajo. Súper recomendable para aquellas personas que tienen pánico de ir al dentista, la Dra tiene todos los cuidados necesarios para hacer sentir al paciente tranquilo y confiar !"
@@ -78,7 +78,7 @@ import Review from "./Review.astro";
 <script>
   import Swiper from 'swiper';
   import { Autoplay, Pagination  } from 'swiper/modules';
-  const swiper1 = new Swiper('.sample-slider-1', {
+  new Swiper('.sample-slider-1', {
     modules: [Autoplay, Pagination ],
     speed: 400,
     spaceBetween: 30,

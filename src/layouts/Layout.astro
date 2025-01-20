@@ -56,9 +56,30 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=2749968201826830&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+ <!-- Google Tag Manager -->
+ <script>
+	(function (w, d, s, l, i) {
+	  (w as Record<string, any>)[l] = (w as Record<string, any>)[l] || [];
+	  (w as Record<string, any>)[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+	  const f = d.getElementsByTagName(s)[0];
+	  const j = d.createElement(s) as HTMLScriptElement;
+	  const dl = l !== 'dataLayer' ? '&l=' + l : '';
+	  j.async = true;
+	  j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+	  if (f.parentNode) {
+		f.parentNode.insertBefore(j, f);
+	  }
+	})(window, document, 'script', 'dataLayer', 'GTM-WJ7T9LR7');
+  </script>
+<!-- End Google Tag Manager -->
+
 
 	</head>
 	<body>
+		 <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJ7T9LR7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 		<slot />
 	</body>
 </html>
